@@ -1,9 +1,10 @@
+
+                
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: gilroy;
-    color: #fff;
+    color: #dbdbdb;
 }
 
 html, body {
@@ -12,15 +13,105 @@ html, body {
     background-color: #000;
     overflow-x: hidden;
 }
+.frappuccino-box{
+    background-color: rgb(255, 194, 109);
+    border-radius: 20px;
+    animation: wave 2s infinite
+    
+}
+.frappuccino-box p{
+    color: #000;
+    padding: 20px;
+    font-family: 'Funky';
+    background-color: #ff7c7c;
+    text-align: center;
+    font-family: 'Alegreya';
+    width: 400px;
+    border-radius: 20px 0px 0px 20px;
+}
 
 body {
     background-color: #000;
+    
 }
+
 
 #main {
     min-height: 100vh;
     width: 100%;
     background-color: #000;
+}
+.marquee {
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.marquee-keywords-pink {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.marquee-keywords-pink span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee-keywords 30s linear infinite;
+    -webkit-animation: marquee-keywords 30s linear infinite;
+  color: #faa2b0 !important;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  font-family: var(--heading-font-family);
+  animation-delay: -14s;
+  -webkit-animation-delay: -14s;
+}
+
+.marquee-keywords-two span {
+  animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}`
+
+@keyframes marquee-keywords {
+  0% {
+      transform: translate(0, 0);
+  }
+
+  100% {
+      transform: translate(-100%, 0);
+  }
+}
+
+@-webkit-keyframes marquee-keywords {
+  0% {
+      -webkit-transform: translate(0, 0);
+  }
+
+  100% {
+      -webkit-transform: translate(-100%, 0);
+  }
+}
+
+.marquee-ingredient-img{
+  width: 150px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  margin: auto !important;
+}
+.hack{
+    background-color: #343431;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    width: 430px;
+    height: 300px;
+    transform: translateY(-211px);
+    
 }
 
 #marquee {
@@ -33,10 +124,10 @@ body {
     background: transparent;
     color: #39ff14;
     font-family: 'Courier New', Courier, monospace;
-    animation: drip-animation 2s infinite;
+    animation: drip-animation 10s infinite;
     text-shadow: 
-        0 0 10px rgba(0, 255, 0, 0.5), 
-        0 0 20px rgba(0, 255, 0, 0.5), 
+        0 0 10px rgba(0, 0, 0, 0.5), 
+        0 0 20px rgba(0, 0, 0, 0.5), 
         0 0 30px rgba(0, 255, 0, 0.5);
 }
 
@@ -44,7 +135,7 @@ body {
     display: inline-block;
     font-size: 18px;
     padding-left: 100%;
-    animation: marquee 10s linear infinite;
+    animation: marquee 15s infinite;
 }
 
 @keyframes marquee {
@@ -68,7 +159,8 @@ body {
     justify-content: center;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.5), 0 0 40px rgba(255, 0, 0, 0.5), 0 0 50px rgba(255, 0, 0, 0.5);
+    background-color: #313131;
+    animation: wave 2s infinite;
 }
 
 #glow-box img, #glow-box2 img {
@@ -77,7 +169,7 @@ body {
 
 .cross {
     font-size: 50px;
-    color: #fff;
+    color: #e8e8e8;
     margin: 0 20px;
 }
 
@@ -87,31 +179,22 @@ body {
 }
 
 #header-text p {
-    font-size: 14px;
+    font-size: 30px;
     color: #ff0000;
     animation: drip-animation 2s infinite;
     text-shadow: 
-        0 0 10px rgba(255, 0, 0, 0.5), 
-        0 0 20px rgba(255, 0, 0, 0.5), 
-        0 0 30px rgba(255, 0, 0, 0.5);
 }
 
 @keyframes drip-animation {
     0%, 100% {
-        text-shadow: 
-            0 0 5px rgba(0, 255, 0, 0.5),
-            0 0 10px rgba(0, 255, 0, 0.5),
-            0 0 15px rgba(0, 255, 0, 0.5),
-            0 0 20px rgba(0, 255, 0, 0.5),
-            0 0 25px rgba(0, 255, 0, 0.5);
+        color: #963d3d;
+
     }
-    50% {
-        text-shadow: 
-            0 0 10px rgba(0, 255, 0, 0.5),
-            0 0 15px rgba(0, 255, 0, 0.5),
-            0 0 20px rgba(0, 255, 0, 0.5),
-            0 0 25px rgba(0, 255, 0, 0.5),
-            0 0 30px rgba(0, 255, 0, 0.5);
+    25%{
+        color: rgb(237, 107, 107);
+    }
+    50%{
+        color: rgb(214, 213, 213);
     }
 }
 
@@ -121,6 +204,7 @@ body {
     display: flex;
     position: relative;
     justify-content: space-between;
+    z-index: 3;
 }
 
 #right {
@@ -136,6 +220,7 @@ body {
     width: 36%;
     height: 100%;
     padding: 160px 110px;
+    font-family: 'Franky';
 }
 
 #center {
@@ -149,11 +234,14 @@ body {
     line-height: 70px;
     font-weight: 700;
     margin-bottom: 50px;
+    font-family: 'Franky';
 }
 
 #left h1 span {
-    color: red;
+    color: rgb(226, 79, 79);
     font-weight: 500;
+    font-family: 'Funky';
+    font-size: 47px;
 }
 
 #left p {
@@ -161,6 +249,7 @@ body {
     font-size: 20px;
     width: 70%;
     line-height: 22px;
+    font-family: 'Franky';
 }
 
 #left button {
@@ -195,6 +284,7 @@ body {
     left: 50%;
     transform: translateX(-50%) rotate(-10deg); /* Initial tilt */
     transition: transform 0.5s ease;
+    z-index: -1;
 }
 
 .tilt:hover {
@@ -202,12 +292,13 @@ body {
 }
 
 .coffee-box {
-    background-color: #6F4E37; /* Coffee color */
+    background-color: #21211a; /* Coffee color */
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    
+    text-align: left;
     width: 430px; /* Increased width */
-    height: 900px; /* Allow height to adjust based on content */
+    height: 1030px; /* Allow height to adjust based on content */
 }
 
 
@@ -223,11 +314,13 @@ body {
 
 #funded-text-left {
     position: relative;
-    top: -1200px;
-    left: 20px;
-    font-size: 22px; /* Smaller font size */
+    top: -1280px;
+    left: 100px;
+    width: 300px;
+    font-size: 18px; /* Smaller font size */
     color: #000;
-    transform: rotate(-15deg);
+    transform: rotate(-100deg);
+    font-family: 'Funky';
     animation: wave 2s infinite;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     font-weight: bold;
@@ -238,9 +331,9 @@ body {
 }
 
 @keyframes wave {
-    0% { transform: rotate(-15deg) translateY(0); }
-    50% { transform: rotate(-15deg) translateY(-5px); }
-    100% { transform: rotate(-15deg) translateY(0); }
+    0% { transform: rotate(-0deg) translateY(0); }
+    50% { transform: rotate(-0deg) translateY(-10px); }
+    100% { transform: rotate(-0deg) translateY(0); }
 }
 
 .cloud-box {
@@ -266,50 +359,62 @@ body {
 #presented-by {
     position: absolute; /* Use absolute positioning */
     right: 20px; /* Position the box from the right edge of the container */
-    top: -1400px; /* Adjust vertical position from the top */
+    top: -1430px; /* Adjust vertical position from the top */
 }
 
 .cloud-box-right {
     background: #fff;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 10px 20px; /* Adjust padding for better fit */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    color: rgb(17, 0, 255); /* Ensure the text color is blue */
     font-size: 16px; /* Adjust font size as needed */
     text-align: left; /* Align text to the left */
-    width: 220px; /* Adjust width as needed */
+    width: 300px; /* Adjust width as needed */
     height: auto; /* Allow height to adjust based on content */
     transform: rotate(25deg); /* Adjusted tilt to 30 degrees to the left */
     animation: move-up-down 2s infinite; /* Animation to move the box up and down */
     font-weight: bold; /* Make the text bold */
+    
 }
 
 /* Ensure text color inside the box is blue */
 .cloud-box-right p {
-    color: rgb(17, 0, 255); /* Ensure the text color is blue */
+    color: rgb(7, 7, 7); /* Ensure the text color is blue */
     font-weight: bold; /* Make the text bold */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the text */
+    font-family: 'Funky';
+    top: -1380px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: bold;
+    background: #fff;
+    letter-spacing: 2px;
 }
 
 @keyframes move-up-down {
-    0% { transform: rotate(30deg) translateY(0); }
-    50% { transform: rotate(30deg) translateY(-5px); }
-    100% { transform: rotate(30deg) translateY(0); }
+    0% { transform: rotate(0deg) translateY(0); }
+    50% { transform: rotate(0deg) translateY(-10px); }
+    100% { transform: rotate(0deg) translateY(0); }
 }
 .warning-box {
-    background-color: #ffcc00; /* Warning color */
+    background-color: #de4b4b;
     padding: 60px;
-    border-radius: 10px;
-    text-align: center;
-    width: 400px; /* Same width as coffee box */
-    margin-top: 70px; /* Space between coffee box and warning box + lower by 50px */
+    border-radius: 20px;
+    text-align: left;
+    width: 820px;
+    height: 770px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: translate3d(561px, -912px, 0px);
 }
 
 .warning-box p {
     font-size: 18px;
-    color: #000; /* Text color */
+    color: rgb(217, 217, 217);
     font-weight: bold;
+    background-color: black;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    letter-spacing: 1px;
+    font-family: 'Alegreya'
 }
 .bottom-left-image-box {
     position: relative; /* Fixes the image at the bottom left */
